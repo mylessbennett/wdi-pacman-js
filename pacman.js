@@ -61,6 +61,7 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
+  console.log('(p) Eat Power-Pellet');
   for (let i = 0; i < ghosts.length; i++) {
     ghostName = ghosts[i].name;
     ghostNum = ghosts[i].menuOption;
