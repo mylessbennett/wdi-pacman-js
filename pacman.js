@@ -67,7 +67,12 @@ function displayMenu() {
   for (let i = 0; i < ghosts.length; i++) {
     ghostName = ghosts[i].name;
     ghostNum = ghosts[i].menuOption;
-    console.log(`(${ghostNum}) Eat ${ghostName}`);
+    if (ghosts[i].edible == true) {
+      ghostEdible = 'edible'
+    } else {
+      ghostEdible = 'inedible'
+    }
+    console.log(`(${ghostNum}) Eat ${ghostName} (${ghostEdible})`);
   }
   console.log('(q) Quit');
 }
