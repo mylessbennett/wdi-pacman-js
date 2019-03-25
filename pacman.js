@@ -37,6 +37,7 @@ let lives = 2;
   };
 
 const ghosts = [inky, blinky, pinky, clyde];
+
 // Draw the screen functionality
 function drawScreen() {
   clearScreen();
@@ -58,6 +59,11 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
+  for (let i = 0; i < ghosts.length; i++) {
+    ghostName = ghosts[i].name;
+    ghostNum = ghosts[i].menuOption;
+    console.log(`(${ghostNum}) Eat ${ghostName}`);
+  }
   console.log('(q) Quit');
 }
 
