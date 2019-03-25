@@ -79,11 +79,17 @@ function eatDot() {
   score += 10;
 }
 
+function gameOver() {
+  if (lives <= 0) {
+    process.exit();
+  }
+}
 
 function eatGhost(ghost) {
   if (ghost.edible == false) {
     lives -= 1;
-    console.log(`\n${ghost.name}, the ${ghost.colour} ghost killed Pac-Man!`)
+    gameOver();
+    console.log(`\n${ghost.name}, the ${ghost.colour} ghost killed Pac-Man!`);
   }
 }
 
