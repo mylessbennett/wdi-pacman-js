@@ -4,38 +4,39 @@ let lives = 2;
 
 
 // Define your ghosts here
-const inky = {
-  menuOption: '1',
-  name: 'Inky',
-  colour: 'Red',
-  character: 'Shadow',
-  edible: false
-};
+  const inky = {
+    menuOption: '1',
+    name: 'Inky',
+    colour: 'Red',
+    character: 'Shadow',
+    edible: false
+  };
 
-const blinky = {
-  menuOption: '2',
-  name: 'Blinky',
-  colour: 'Cyan',
-  character: 'Speedy',
-  edible: false
-}
+  const blinky = {
+    menuOption: '2',
+    name: 'Blinky',
+    colour: 'Cyan',
+    character: 'Speedy',
+    edible: false
+  };
 
-const pinky = {
-  menuOption: '3',
-  name: 'Pinky',
-  colour: 'Pink',
-  character: 'Bashful',
-  edible: false
-}
+  const pinky = {
+    menuOption: '3',
+    name: 'Pinky',
+    colour: 'Pink',
+    character: 'Bashful',
+    edible: false
+  };
 
-const clyde = {
-  menuOption: '4',
-  name: 'Clyde',
-  colour: 'Orange',
-  character: 'Pokey',
-  edible: false
-}
+  const clyde = {
+    menuOption: '4',
+    name: 'Clyde',
+    colour: 'Orange',
+    character: 'Pokey',
+    edible: false
+  };
 
+const ghosts = [inky, blinky, pinky, clyde];
 // Draw the screen functionality
 function drawScreen() {
   clearScreen();
