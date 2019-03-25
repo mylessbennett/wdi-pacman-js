@@ -80,6 +80,13 @@ function eatDot() {
 }
 
 
+function eatGhost(ghost) {
+  if (ghost.edible == false) {
+    lives -= 1;
+    console.log(`\n${ghost.name}, the ${ghost.colour} ghost killed Pac-Man!`)
+  }
+}
+
 // Process Player's Input
 function processInput(key) {
   switch(key) {
@@ -89,6 +96,18 @@ function processInput(key) {
       break;
     case 'd':
       eatDot();
+      break;
+    case '1':
+      eatGhost(ghosts[0]);
+      break;
+    case '2':
+      eatGhost(ghosts[1]);
+      break;
+    case '3':
+      eatGhost(ghosts[2]);
+      break;
+    case '4':
+      eatGhost(ghosts[3]);
       break;
     default:
       console.log('\nInvalid Command!');
