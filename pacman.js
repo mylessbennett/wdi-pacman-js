@@ -95,6 +95,10 @@ function eatGhost(ghost) {
     lives -= 1;
     gameOver();
     console.log(`\n${ghost.name}, the ${ghost.colour} ghost killed Pac-Man!`);
+  } else {
+    score += 200;
+    ghost.edible = false;
+    console.log(`\nPac-Man ate ${ghost.name}, the ${ghost.character} ghost!`)
   }
 }
 
